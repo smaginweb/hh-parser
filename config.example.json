@@ -1,0 +1,22 @@
+{
+  "exclude_title_keywords": [
+    "Fullstack",
+    "Full-stack",
+    ".NET",
+    "C#"
+  ],
+  "llm_provider": "deepseek",
+  "deepseek_api_key": "YOUR_DEEPSEEK_API_KEY",
+  "deepseek_model": "deepseek-chat",
+  "yandex_api_key": "YOUR_YANDEX_API_KEY",
+  "yandex_folder_id": "YOUR_YANDEX_FOLDER_ID",
+  "yandex_model": "yandexgpt-lite",
+  "gemini_api_key": "YOUR_GEMINI_API_KEY",
+  "gemini_model": "gemini-2.0-flash",
+  "openrouter_api_key": "YOUR_OPENROUTER_API_KEY",
+  "openrouter_model": "meta-llama/llama-3.3-70b-instruct:free",
+  "groq_api_key": "YOUR_GROQ_API_KEY",
+  "groq_model": "llama-3.3-70b-versatile",
+  "analysis_prompt": "Проанализируй текст вакансии и верни JSON-объект со следующими полями. Используй ТОЛЬКО информацию из текста. Не придумывай.\n\nПоля:\nstack_summary: 1-2 предложения — что за продукт/сервис разрабатывается и на каком стеке.\nfrontend_framework: главный FE-фреймворк из вакансии (React, Vue, Angular, Svelte...) или null.\nbackend_framework: главная BE-технология из вакансии (Node.js, NestJS, Django, Go, Spring...) или null.\nstyling: способ стилизации из вакансии (SCSS, CSS Modules, Styled-components, Tailwind, BEM...) или null.\nother_languages: массив языков программирования из вакансии КРОМЕ JavaScript и TypeScript. [] если нет.\nemployment: тип оформления из вакансии (ТК / ИП / Самозанятость / ГПХ) или null если не указан.\ncompany_description: 2-3 предложения о компании и продукте из текста вакансии.\nimportant: одно предложение — самое важное или нестандартное условие именно этой вакансии.",
+  "cover_letter_prompt_file": "cover_letter_prompt.txt"
+}

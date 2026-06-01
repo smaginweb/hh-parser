@@ -1,0 +1,407 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.app-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  color: var(--text-h);
+}
+
+.subtitle {
+  color: var(--text);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dot {
+  opacity: 0.35;
+}
+
+.read-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.read-count {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.toggle-read {
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.toggle-read:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text);
+  padding: 60px 0;
+  font-size: 16px;
+}
+
+.vacancy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vacancy-card {
+  position: relative;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  transition: box-shadow 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.vacancy-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--accent-border);
+}
+
+.vacancy-card.is-read {
+  opacity: 0.45;
+}
+
+.vacancy-card.is-read:hover {
+  opacity: 0.75;
+}
+
+.vacancy-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding-right: 120px;
+}
+
+.vacancy-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.vacancy-card.is-read .vacancy-title {
+  color: var(--text);
+}
+
+.vacancy-company {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.company-city {
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.vacancy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.badge.salary {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.badge.remote {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+
+.badge.hybrid {
+  background: rgba(20, 184, 166, 0.12);
+  color: #0d9488;
+}
+
+.badge.emp-tk {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.badge.emp-gph {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.badge.emp-self {
+  background: rgba(234, 179, 8, 0.12);
+  color: #ca8a04;
+  font-weight: 600;
+}
+
+.badge.emp-other {
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.badge.schedule {
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.badge.it-acc {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge.remote  { color: #4ade80; }
+  .badge.hybrid  { color: #2dd4bf; }
+  .badge.emp-tk  { color: #4ade80; }
+  .badge.emp-gph { color: #fb923c; }
+  .badge.emp-self { color: #facc15; }
+  .badge.it-acc  { color: #818cf8; }
+}
+
+.badge.city {
+  background: transparent;
+  color: var(--text);
+  padding-left: 0;
+}
+
+.vacancy-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.skill-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--code-bg, #f4f3ec);
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
+
+
+.vacancy-analysis {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.analysis-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.analysis-label {
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.55;
+  white-space: nowrap;
+  min-width: 90px;
+}
+
+.analysis-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.framework-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.lang-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.backend-badge {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.backend-skill-tag {
+  background: var(--accent-bg);
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
+
+.analysis-important {
+  font-size: 11px;
+  color: var(--text-h);
+  opacity: 0.75;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.analysis-company-desc {
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.6;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .framework-tag { color: #818cf8; background: rgba(99, 102, 241, 0.15); }
+  .lang-tag { color: #fbbf24; background: rgba(245, 158, 11, 0.15); }
+  .backend-badge { color: #f87171; background: rgba(239, 68, 68, 0.15); }
+}
+
+.vacancy-date {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.vacancy-letter {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.letter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.letter-label {
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.5;
+  flex: 1;
+}
+
+.letter-copy-btn {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-border);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.letter-copy-btn:hover {
+  background: var(--accent-bg);
+}
+
+.letter-copy-btn.copied {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+.letter-toggle-btn {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.letter-toggle-btn:hover {
+  opacity: 1;
+}
+
+.letter-text {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-h);
+  white-space: pre-wrap;
+  background: var(--accent-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .letter-copy-btn.copied { color: #4ade80; border-color: #4ade80; }
+}
+
+.read-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.read-btn:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.read-btn--active {
+  border-color: transparent;
+  background: var(--accent-bg);
+  color: var(--accent);
+}

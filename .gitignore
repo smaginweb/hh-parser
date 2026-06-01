@@ -1,0 +1,26 @@
+# Secrets
+config.json
+cover_letter_prompt.txt
+
+# Parser output
+vacancies.csv
+frontend/public/vacancies.json
+resume_my.txt
+
+# Archives
+*.zip
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude
+.claude/
+
+# OS
+.DS_Store
